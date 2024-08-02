@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvnkwmvcmrutm"]
+
+[ext_resource type="Texture2D" uid="uid://185o8wgyvgma" path="res://sprites/Icones/850321_tacua28_health-and-mana-bars-design-removebg-preview.png" id="1_qhdqh"]
+[ext_resource type="Script" path="res://Scripts/UIController.cs" id="1_yeb43"]
+[ext_resource type="Texture2D" uid="uid://cghra0nxnsdwl" path="res://sprites/Icones/image_216.png" id="2_bl4bo"]
+[ext_resource type="Texture2D" uid="uid://44bhykyg2ocx" path="res://sprites/Icones/image_221.png" id="2_fdqbc"]
+
+[node name="UI" type="Node2D" node_paths=PackedStringArray("IconeArma")]
+script = ExtResource("1_yeb43")
+IconeArma = NodePath("Control/ArmaVida/IconeArma")
+TexturaArco = ExtResource("2_bl4bo")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 649.0
+size_flags_horizontal = 4
+
+[node name="ArmaVida" type="Sprite2D" parent="Control"]
+position = Vector2(165, 80)
+scale = Vector2(0.519999, 0.48)
+texture = ExtResource("1_qhdqh")
+
+[node name="IconeArma" type="Sprite2D" parent="Control/ArmaVida"]
+position = Vector2(-171.154, -2.08334)
+scale = Vector2(3.58392, 4.16667)
+texture = ExtResource("2_fdqbc")
